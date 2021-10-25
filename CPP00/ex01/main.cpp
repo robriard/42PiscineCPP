@@ -1,21 +1,23 @@
 #include <iostream>
-#include "User.class.hpp"
+#include <sstream>
+#include "PhoneBook.class.hpp"
+void    searchContact(PhoneBook phonebook);
+void    addContact(int &index, Contact &Contact);
 
-Users addUser(User users[8])
-{
-
-}
-
-int main( void) {
-    char *input;
-    User users[8];
+int     main( void) {
+    std::string input;
+    int last = 0;
+    PhoneBook phonebook;
 
     while ( true ) {
-        std::cin >> input;
+        std::cout << ">>> ";
+        getline(std::cin, input);
         if ( input == "EXIT")
             return (EXIT_SUCCESS);
         else if ( input == "ADD")
-            addUser(users);
+            addContact(last, phonebook.Contacts(last));
+        else if ( input == "SEARCH")
+            searchContact(phonebook);
     }
 
 }

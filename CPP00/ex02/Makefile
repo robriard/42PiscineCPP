@@ -6,7 +6,7 @@
 #    By: robriard <robriard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/13 11:21:40 by robriard          #+#    #+#              #
-#    Updated: 2021/10/22 10:26:53 by robriard         ###   ########.fr        #
+#    Updated: 2021/10/25 14:02:06 by robriard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,15 +22,12 @@ WHITE		:= $(shell tput -Txterm setaf 7)
 RESET		:= $(shell tput -Txterm sgr0)
 endif
 
-NAME = phonebook
+NAME = account
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 
-SRCS =	add.cpp \
-		Contact.class.cpp \
-		main.cpp \
-		PhoneBook.class.cpp \
-		search.cpp
+SRCS =	Account.cpp \
+		tests.cpp
 OBJS = ${SRCS:.cpp=.o}
 DEP = $(OBJS:%.o=%.d)
 
