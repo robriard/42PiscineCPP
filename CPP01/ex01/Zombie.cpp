@@ -20,12 +20,19 @@ void    Zombie::announce() const{
 
 void    Zombie::setName(std::string name) {
     this->_name = name;
+    return ;
 }
 
-Zombie::Zombie(std::string name="Kévin") : _name(name){
+Zombie::Zombie() {
+    return ;
+}
+
+Zombie::Zombie(std::string name) : _name(name){
     this->announce();
+    return ;
 }
 
 Zombie::~Zombie(void){
     std::cout << this->_name << " has been killed!" << std::endl;
+    return ;
 }
