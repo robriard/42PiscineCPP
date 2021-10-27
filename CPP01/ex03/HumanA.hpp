@@ -17,11 +17,11 @@
 
 class HumanA {
 public:
-    HumanA();
-    HumanA(std::string name);
-    HumanA(Weapon& weapon);
+ 
+
+
     HumanA(std::string name, Weapon weapon);
-    ~HumanA();
+    ~HumanA()
 
     void                Attack();
     void                takeWeapon(Weapon weapon);
