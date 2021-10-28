@@ -12,6 +12,8 @@ int     main( void) {
     while ( true ) {
         std::cout << ">>> ";
         getline(std::cin, input);
+        if (std::ios_base::eofbit)
+            break;
         if ( input == "EXIT")
             return (EXIT_SUCCESS);
         else if ( input == "ADD")

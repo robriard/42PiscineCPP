@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: robriard <robriard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 16:49:54 by robriard          #+#    #+#             */
-/*   Updated: 2021/10/27 15:07:43 by robriard         ###   ########.fr       */
+/*   Created: 2021/10/27 14:08:43 by robriard          #+#    #+#             */
+/*   Updated: 2021/10/27 15:17:48 by robriard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
 #include "Weapon.hpp"
 
-class HumanA {
+class HumanB {
 public:
-    HumanA(std::string name, Weapon& weapon);
-    ~HumanA();
+    HumanB(std::string name);
+    ~HumanB();
 
-    void                attack(void);
-    void                takeWeapon(Weapon& weapon);
-    const std::string&  getName(void) const;
+    void                attack();
+    void                setWeapon(Weapon& weapon);
+    const std::string&  getName() const;
 
 private:
     const std::string _name;
-    Weapon& _Weapon;
+    Weapon* _Weapon;
 };
 
 #endif

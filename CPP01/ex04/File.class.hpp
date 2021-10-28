@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   File.class.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: robriard <robriard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 16:49:54 by robriard          #+#    #+#             */
-/*   Updated: 2021/10/27 15:07:43 by robriard         ###   ########.fr       */
+/*   Created: 2021/10/27 16:07:59 by robriard          #+#    #+#             */
+/*   Updated: 2021/10/27 17:12:35 by robriard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
+#ifndef FILE_CLASS_HPP
+# define FILE_CLASS_HPP
 
-#include "Weapon.hpp"
+# include <iostream>
 
-class HumanA {
+class File{
 public:
-    HumanA(std::string name, Weapon& weapon);
-    ~HumanA();
 
-    void                attack(void);
-    void                takeWeapon(Weapon& weapon);
-    const std::string&  getName(void) const;
+    File(std::string filename, std::string oldOccurance, std::string newOccurance);
+    ~File();
+
+    const std::string& getFilename(void) const;
 
 private:
-    const std::string _name;
-    Weapon& _Weapon;
+
+    const std::string       _filename;
+    const std::string       _oldOccurance;
+    const std::string       _newOccurance;
 };
 
 #endif

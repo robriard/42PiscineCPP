@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   File.class.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: robriard <robriard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 16:49:54 by robriard          #+#    #+#             */
-/*   Updated: 2021/10/27 15:07:43 by robriard         ###   ########.fr       */
+/*   Created: 2021/10/27 16:09:31 by robriard          #+#    #+#             */
+/*   Updated: 2021/10/27 16:22:17 by robriard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
+#include "File.class.hpp"
 
-#include "Weapon.hpp"
+File::File(std::string filename) : _filename(filename){
+    return;
+}
 
-class HumanA {
-public:
-    HumanA(std::string name, Weapon& weapon);
-    ~HumanA();
+File::~File(){
+    return;
+}
 
-    void                attack(void);
-    void                takeWeapon(Weapon& weapon);
-    const std::string&  getName(void) const;
-
-private:
-    const std::string _name;
-    Weapon& _Weapon;
-};
-
-#endif
+const std::string&  File::getFilename(void) const{
+    return this->_filename;
+}

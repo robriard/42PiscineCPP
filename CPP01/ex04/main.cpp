@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: robriard <robriard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 16:49:54 by robriard          #+#    #+#             */
-/*   Updated: 2021/10/27 15:07:43 by robriard         ###   ########.fr       */
+/*   Created: 2021/10/27 16:22:27 by robriard          #+#    #+#             */
+/*   Updated: 2021/10/27 16:28:00 by robriard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
+#include "File.class.hpp"
 
-#include "Weapon.hpp"
-
-class HumanA {
-public:
-    HumanA(std::string name, Weapon& weapon);
-    ~HumanA();
-
-    void                attack(void);
-    void                takeWeapon(Weapon& weapon);
-    const std::string&  getName(void) const;
-
-private:
-    const std::string _name;
-    Weapon& _Weapon;
-};
-
-#endif
+int main(int argc, char **argv)
+{
+    if (argc != 4){std::cout << "Error" << std::endl; return EXIT_FAILURE;}
+    
+    File f(argv[1], argv[2], argv[3]);
+}

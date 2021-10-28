@@ -6,7 +6,7 @@
 /*   By: robriard <robriard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 15:40:30 by robriard          #+#    #+#             */
-/*   Updated: 2021/10/26 16:49:17 by robriard         ###   ########.fr       */
+/*   Updated: 2021/10/27 14:49:39 by robriard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ Weapon::Weapon(std::string type) : _type(type){
 }
 
 Weapon::~Weapon(void) {
-    std::cout << this->_type << " has been destroyed";
+    std::cout << this->_type << " has been destroyed" << std::endl;
 }
