@@ -14,20 +14,31 @@
 # define FILE_CLASS_HPP
 
 # include <iostream>
+# include <fstream>
 
 class File{
 public:
 
-    File(std::string filename, std::string oldOccurance, std::string newOccurance);
+    File(std::string name, std::string oldSequence, std::string newSequence);
     ~File();
 
-    const std::string& getFilename(void) const;
+    std::string&    getName(void);
+    std::string&    getOldSequence(void);
+    std::string&    getNewSequence(void);
+    void            ifsOpen(void);
+    void            ofsOpen(void);
+    void            ifsRead(void);
+    void            ifsClose(void);
+    void            ofsClose(void);
+    void            ofsWrite(void);
 
 private:
-
-    const std::string       _filename;
-    const std::string       _oldOccurance;
-    const std::string       _newOccurance;
+    const std::string   _name;
+    const std::string   _oldSequence;
+    const std::string   _newSequence;
+    std::string         _content;
+    std::ifstream       _ifs;
+    std::ofstream       _ofs;
 };
 
 #endif
