@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: robriard <robriard@student.42.fr>          +#+  +:+       +#+         #
+#    By: unknow <unknow@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/13 11:21:40 by robriard          #+#    #+#              #
-#    Updated: 2021/10/27 15:41:58 by robriard         ###   ########.fr        #
+#    Updated: 2021/11/02 06:30:10 by unknow           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,12 +22,12 @@ WHITE		:= $(shell tput -Txterm setaf 7)
 RESET		:= $(shell tput -Txterm sgr0)
 endif
 
-NAME = violence
+NAME = karenFilter
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 
 SRCS =	main.cpp	\
-		File.class.cpp
+		Karen.cpp
 OBJS = ${SRCS:.cpp=.o}
 DEP = $(OBJS:%.o=%.d)
 
