@@ -6,7 +6,7 @@
 #    By: unknow <unknow@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/13 11:21:40 by robriard          #+#    #+#              #
-#    Updated: 2021/11/08 13:15:48 by unknow           ###   ########.fr        #
+#    Updated: 2021/11/08 14:14:02 by unknow           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,12 +22,12 @@ WHITE		:= $(shell tput -Txterm setaf 7)
 RESET		:= $(shell tput -Txterm sgr0)
 endif
 
-NAME = account
+NAME = Fixed
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 
-SRCS =	Account.cpp \
-		tests.cpp
+SRCS =	main.cpp	\
+		Fixed.cpp
 OBJS = ${SRCS:.cpp=.o}
 DEP = $(OBJS:%.o=%.d)
 
@@ -55,6 +55,5 @@ fclean:  clean
 re: fclean all
 
 .PHONY: all clean fclean re 
-
 
 # ✅ ❌ 🔄

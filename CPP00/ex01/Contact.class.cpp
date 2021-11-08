@@ -5,19 +5,20 @@
 /*
  * ====== Jet 20set =======
  */
-void        Contact::setVar(int index){
+int        Contact::setVar(int index){
     this->_index = index;
     this->_created =true;
     std::cout << "First Name: ";
-    getline(std::cin, this->_firstName);
+    if (!getline(std::cin, this->_firstName)) return EXIT_FAILURE;
     std::cout << "Last Name: ";
-    getline(std::cin, this->_lastName);
+    if (!getline(std::cin, this->_lastName)) return EXIT_FAILURE;
     std::cout << "Nickname: ";
-    getline(std::cin, this->_nickname);
+    if (!getline(std::cin, this->_nickname)) return EXIT_FAILURE;
     std::cout << "Phone Number: ";
-    getline(std::cin, this->_phoneNumber);
+    if (!getline(std::cin, this->_phoneNumber)) return EXIT_FAILURE;
     std::cout << "Secret: ";
-    getline(std::cin, this->_secret);
+    if (!getline(std::cin, this->_secret)) return EXIT_FAILURE;
+    return EXIT_SUCCESS;
 }
 
 /*

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: robriard <robriard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:22:27 by robriard          #+#    #+#             */
-/*   Updated: 2021/10/27 16:28:00 by robriard         ###   ########.fr       */
+/*   Updated: 2021/11/08 14:00:13 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,4 @@ int main(int argc, char **argv){
     f.ofsOpen();
     f.ofsWrite();
     f.ofsClose();
-    std::cout << f.getName();
 }

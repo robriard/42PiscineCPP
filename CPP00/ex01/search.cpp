@@ -29,7 +29,7 @@ static void printvar(Contact contact) {
     std::cout << "Secret: " << contact.getSecret() << std::endl;
 }
 
-void    searchContact(PhoneBook phonebook) {
+int    searchContact(PhoneBook phonebook) {
     std::string input;
     std::cout << "*----------*----------*----------*----------*" << std::endl;
     std::cout << "|     index|first name| last name|  nickname|" << std::endl;
@@ -39,12 +39,12 @@ void    searchContact(PhoneBook phonebook) {
         resume(phonebook.Contacts(index));
         index++;
     }
-    if (index == 0) return;
+    if (index == 0) return EXIT_BOF;
     index = 0;
     std::cout << "Select an index: ";
-    getline (std::cin, input); 
+    if (!getline (std::cin, input)) return EXIT_FAILURE; 
     std::stringstream(input) >> index;
-    if (index <= 0 || index > 8 || !phonebook.Contacts(index - 1).getCreated()) return;
+    if (index <= 0 || index > 8 || !phonebook.Contacts(index - 1).getCreated()) return EXIT_BOF;
     printvar(phonebook.Contacts(index - 1));
-    return;
+    return EXIT_SUCCESS;
 }

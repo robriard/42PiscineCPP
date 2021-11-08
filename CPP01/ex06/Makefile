@@ -6,7 +6,7 @@
 #    By: unknow <unknow@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/13 11:21:40 by robriard          #+#    #+#              #
-#    Updated: 2021/11/02 06:30:10 by unknow           ###   ########.fr        #
+#    Updated: 2021/11/08 14:05:07 by unknow           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ DEP = $(OBJS:%.o=%.d)
 all: ${NAME}
 
 -include $(DEP)
-%.o: %.c
+%.o: %.cpp
 	@printf "\e[2K\r- $@ [🔄]"
 	@$(CC) $(FLAGS) -MMD -o $@ -c $<
 	@printf "\e[2K\r- $@ [✅]\n"

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: robriard <robriard@student.42.fr>          +#+  +:+       +#+         #
+#    By: unknow <unknow@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/13 11:21:40 by robriard          #+#    #+#              #
-#    Updated: 2021/10/27 15:41:58 by robriard         ###   ########.fr        #
+#    Updated: 2021/11/08 13:56:49 by unknow           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ WHITE		:= $(shell tput -Txterm setaf 7)
 RESET		:= $(shell tput -Txterm sgr0)
 endif
 
-NAME = violence
+NAME = sed
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 
@@ -34,7 +34,7 @@ DEP = $(OBJS:%.o=%.d)
 all: ${NAME}
 
 -include $(DEP)
-%.o: %.c
+%.o: %.cpp
 	@printf "\e[2K\r- $@ [🔄]"
 	@$(CC) $(FLAGS) -MMD -o $@ -c $<
 	@printf "\e[2K\r- $@ [✅]\n"

@@ -2,6 +2,8 @@
 #ifndef CONTACT_CLASS_H
 # define CONTACT_CLASS_H
 
+# define EXIT_BOF 0
+
 #include <string>
 
 class Contact{
@@ -15,7 +17,7 @@ public:
 /*
  * ====== Jet 20set =======
  */
-    void        setVar(int index);
+    int        setVar(int index);
 
 
 /*

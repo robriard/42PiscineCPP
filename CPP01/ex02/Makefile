@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: robriard <robriard@student.42.fr>          +#+  +:+       +#+         #
+#    By: unknow <unknow@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/13 11:21:40 by robriard          #+#    #+#              #
-#    Updated: 2021/10/25 15:10:30 by robriard         ###   ########.fr        #
+#    Updated: 2021/11/08 13:18:56 by unknow           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ DEP = $(OBJS:%.o=%.d)
 all: ${NAME}
 
 -include $(DEP)
-%.o: %.c
+%.o: %.cpp
 	@printf "\e[2K\r- $@ [🔄]"
 	@$(CC) $(FLAGS) -MMD -o $@ -c $<
 	@printf "\e[2K\r- $@ [✅]\n"

@@ -1,12 +1,12 @@
 #include <iostream>
 #include "Contact.class.hpp"
 
-void    addContact(int &index, Contact &contact){
+int    addContact(int &index, Contact &contact){
     index+=1;
     if (index > 8){
         std::cout << "Maximun number of contacts" << std::endl;
-        return;    
+        return EXIT_BOF;    
     }
-    if (contact.getCreated()){return;}
-    contact.setVar(index);
+    if (contact.getCreated()){return EXIT_FAILURE;}
+    return (contact.setVar(index));
 }

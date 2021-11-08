@@ -6,7 +6,7 @@
 /*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 11:33:15 by unknow            #+#    #+#             */
-/*   Updated: 2021/11/02 06:49:07 by unknow           ###   ########.fr       */
+/*   Updated: 2021/11/08 14:08:34 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,28 +68,13 @@ void    Karen::error(void){
 void    Karen::complain(std::string level){
     switch (hash(level)) {
         case 0:
-            for (int i = 0; i < 4; i++){ 
-                (this->*(functions[i]))();
-                std::cout << std::endl;
-            }
-            break;
+            (this->*(functions[0]))();
         case 1:
-            for (int i = 1; i < 4; i++){ 
-                (this->*(functions[i]))();
-                std::cout << std::endl;
-            }
-            break;
+            (this->*(functions[1]))();
         case 2:
-            for (int i = 2; i < 4; i++){ 
-                (this->*(functions[i]))();
-                std::cout << std::endl;
-            }
-            break;
+            (this->*(functions[2]))();
         case 3:
-            for (int i = 3; i < 4; i++){ 
-                (this->*(functions[i]))();
-                std::cout << std::endl;
-            }
+            (this->*(functions[3]))();
             break;
         default:
             std::cout
