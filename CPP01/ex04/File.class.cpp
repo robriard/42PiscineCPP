@@ -6,7 +6,7 @@
 /*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:09:31 by robriard          #+#    #+#             */
-/*   Updated: 2021/11/04 09:54:04 by unknow           ###   ########.fr       */
+/*   Updated: 2021/11/10 22:23:51 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,11 +89,12 @@ void            File::ofsWrite(void){
 
 void            File::replace(void){
     std::string str;
-    for (int i = (this->_content.size() - this->_oldSequence.size()); i >= 0; i--){
+    for (unsigned int i = 0; i < this->_content.size(); i++) {
         str = this->_content.substr(i, this->_oldSequence.size());
-        if (str == this->_oldSequence){
+        if (!str.compare(this->_oldSequence)) {
             this->_content.erase(i, this->_oldSequence.size());
             this->_content.insert(i, this->_newSequence);
+            i += this->_newSequence.size() - 1;
         }
     }
     return;
