@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: robriard <robriard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 10:47:11 by unknow            #+#    #+#             */
-/*   Updated: 2021/11/14 09:55:27 by robriard         ###   ########.fr       */
+/*   Updated: 2021/11/15 11:34:07 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <iostream>
 
-class ClapTrap virtual{
+class ClapTrap {
 public:
     ClapTrap(std::string name);
     ClapTrap(ClapTrap const& src);
@@ -31,13 +31,11 @@ public:
     unsigned int        getEnergy(void) const;
 
 protected:
+    ClapTrap();
     std::string     _name;
     unsigned int    _hit;
     unsigned int    _energy;
     unsigned int    _attack;
-
-private:
-    ClapTrap();
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 22:33:07 by unknow            #+#    #+#             */
-/*   Updated: 2021/11/11 04:01:22 by unknow           ###   ########.fr       */
+/*   Updated: 2021/11/15 12:37:29 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap {
+class FragTrap : virtual public ClapTrap {
 public:
     FragTrap(std::string name);
     FragTrap(FragTrap const & src);
@@ -24,7 +24,7 @@ public:
     void    highFivesGuys(void);
     void    attack(std::string const & target);
 
-private:
+protected:
     FragTrap(void);
 };
 

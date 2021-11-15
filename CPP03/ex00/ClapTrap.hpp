@@ -6,7 +6,7 @@
 /*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 10:47:11 by unknow            #+#    #+#             */
-/*   Updated: 2021/11/09 16:18:44 by unknow           ###   ########.fr       */
+/*   Updated: 2021/11/15 11:34:07 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public:
     const std::string   getName(void) const;
     unsigned int        getEnergy(void) const;
 
-private:
+protected:
     ClapTrap();
     std::string     _name;
     unsigned int    _hit;

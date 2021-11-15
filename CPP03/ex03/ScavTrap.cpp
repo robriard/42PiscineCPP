@@ -6,36 +6,34 @@
 /*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 23:16:24 by unknow            #+#    #+#             */
-/*   Updated: 2021/11/11 04:42:35 by unknow           ###   ########.fr       */
+/*   Updated: 2021/11/15 12:38:26 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(void) : ClapTrap("Déjà Comment tu as réussi à utiliser ce constructeur ?"){
+ScavTrap::ScavTrap(void) : ClapTrap(){
+    std::cout << "[ScavTrap] Default constructor called" << std::endl;
     this->_hit = 100;
     this->_energy = 50;
     this->_attack = 20;
-    std::cout << "Default ScavTrap Constructor called" << std::endl;
     return;
 }
 
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name){
+    std::cout << "[ScavTrap] Overload constructor called" << std::endl;
     this->_hit = 100;
     this->_energy = 50;
     this->_attack = 20;
-    std::cout << "[ScavTrap] " << this->_name
-        << " has been created" << std::endl;
     return;
 }
 
 ScavTrap::ScavTrap(ScavTrap const & src) : ClapTrap(src){
+    std::cout << "[ScavTrap] Copy constructor called" << std::endl;
     this->_hit = 100;
     this->_energy = 50;
     this->_attack = 20;
-    std::cout << "[ScavTrap] " << this->_name
-        << " has been created by copy" << std::endl;
     return;
 }
 
@@ -46,6 +44,7 @@ ScavTrap::~ScavTrap(void){
 }
 
 ScavTrap&   ScavTrap::operator=(ScavTrap const& rhs){
+    std::cout << "[ScavTrap] operator = called" << std::endl;
     this->_name = rhs._name;
     this->_hit = rhs._hit;
     this->_energy = rhs._energy;
@@ -58,7 +57,7 @@ void ScavTrap::guardGate(void){
         << this->_name << " and I enter in Gate Keeper mode" << std::endl;
 }
 
-void        ScavTrap::attack(std::string const & target){
+void        ScavTrap::attack(std::string const & target) const{
     std::cout << "[ScavTrap] " << this->_name 
         << " attack " << target
         << ", causing " << this->_attack

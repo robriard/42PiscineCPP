@@ -3,116 +3,124 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: robriard <robriard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 14:57:03 by unknow            #+#    #+#             */
-/*   Updated: 2021/11/11 09:00:47 by robriard         ###   ########.fr       */
+/*   Updated: 2021/11/15 11:47:30 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
-
 int main(void){
-    /*
-     *      Claptrap Tests
-     */
-    std::cout << "===== Claptrap Tests =====" << std::endl;
+    std::cout << "===== CLAPTRAP TESTS =====" << std::endl << std::endl;
     {
-        ClapTrap Robot1("Kévin");
-        ClapTrap Robot2("John Cena");
-        ClapTrap Robot3 = Robot1;
-        ClapTrap Robot4(Robot2);
-        std::cout << std::endl;
+        ClapTrap claptrap1("Kévin");
+        ClapTrap claptrap2("Dylan");
+        ClapTrap claptrap3 = claptrap1;
+        ClapTrap claptrap4(claptrap2);
 
-        std::cout << "Robot1 name is " << Robot1.getName() << std::endl;
-        std::cout << "Robot2 name is " << Robot2.getName() << std::endl;
-        std::cout << "Robot3 name is " << Robot3.getName() << std::endl;
-        std::cout << "Robot4 name is " << Robot4.getName() << std::endl;
-        std::cout << std::endl;
+        std::cout << std::endl << std::endl;
+        std::cout << "claptrap1 name is " << claptrap1.getName() << std::endl;
+        std::cout << "claptrap2 name is " << claptrap2.getName() << std::endl;
+        std::cout << "claptrap3 name is " << claptrap3.getName() << std::endl;
+        std::cout << "claptrap4 name is " << claptrap4.getName() << std::endl;
 
-        Robot1.attack("Bobby");
-        Robot2.attack("Billy");
-        std::cout << std::endl;
+        std::cout << std::endl << std::endl;
+        claptrap1.attack("Bobby");
+        claptrap2.attack("Billy");
 
-        Robot3.takeDamage(5);
-        std::cout << "Robot3 have " << Robot3.getEnergy()
+        std::cout << std::endl << std::endl;
+        claptrap3.takeDamage(5);
+        std::cout << claptrap3.getName() << "(claptrap3) have " << claptrap3.getEnergy()
             << " Energy Points" << std::endl;
-        Robot4.beRepaired(5);
-        std::cout << "Robot4 have " << Robot4.getEnergy()
+        claptrap4.beRepaired(5);
+        std::cout << claptrap4.getName() << "(claptrap4) have " << claptrap4.getEnergy()
             << " Energy Points" << std::endl;
-        Robot4.takeDamage(10);
-        Robot3.beRepaired(3);
-        std::cout << "Robot3 have " << Robot3.getEnergy()
+        claptrap4.takeDamage(10);
+        std::cout << claptrap4.getName() << "(claptrap4) have " << claptrap4.getEnergy()
             << " Energy Points" << std::endl;
-        std::cout << std::endl;
-    }
-    
-    /*
-     *      Scavtrap Tests
-     */
-    std::cout << std::endl << std::endl << "===== Scavtrap Tests =====" << std::endl;
-    {
-        ScavTrap Robot1("Kévin");
-        ScavTrap Robot2("John Cena");
-        ScavTrap Robot3 = Robot1;
-        ScavTrap Robot4(Robot2);
-        std::cout << std::endl;
-
-        std::cout << "Robot1 name is " << Robot1.getName() << std::endl;
-        std::cout << "Robot2 name is " << Robot2.getName() << std::endl;
-        std::cout << "Robot3 name is " << Robot3.getName() << std::endl;
-        std::cout << "Robot4 name is " << Robot4.getName() << std::endl;
-        std::cout << std::endl;
-
-        Robot1.attack("Bobby");
-        Robot2.attack("Billy");
-        std::cout << std::endl;
-
-        Robot3.takeDamage(5);
-        std::cout << "Robot3 have " << Robot3.getEnergy()
+        claptrap3.beRepaired(3);
+        std::cout << claptrap3.getName() << "(claptrap3) have " << claptrap3.getEnergy()
             << " Energy Points" << std::endl;
-        Robot4.beRepaired(5);
-        std::cout << "Robot4 have " << Robot4.getEnergy()
-            << " Energy Points" << std::endl;
-        Robot4.takeDamage(10);
-        Robot3.beRepaired(3);
-        std::cout << "Robot3 have " << Robot3.getEnergy()
-            << " Energy Points" << std::endl;
-        std::cout << std::endl;
     }
 
-    /*
-     *      Fragtrap Tests
-     */
-    std::cout << std::endl << std::endl << "===== Fragtrap Tests =====" << std::endl;
+    std::cout << std::endl << std::endl << std::endl;
+    std::cout << "===== SCAVTRAP TESTS =====" << std::endl << std::endl;
     {
-        FragTrap Robot1("Kévin");
-        FragTrap Robot2("John Cena");
-        FragTrap Robot3 = Robot1;
-        FragTrap Robot4(Robot2);
-        std::cout << std::endl;
+        ScavTrap ScavTrap1("Kévin");
+        ScavTrap ScavTrap2("Dylan");
+        ScavTrap ScavTrap3 = ScavTrap1;
+        ScavTrap ScavTrap4(ScavTrap2);
 
-        std::cout << "Robot1 name is " << Robot1.getName() << std::endl;
-        std::cout << "Robot2 name is " << Robot2.getName() << std::endl;
-        std::cout << "Robot3 name is " << Robot3.getName() << std::endl;
-        std::cout << "Robot4 name is " << Robot4.getName() << std::endl;
-        std::cout << std::endl;
+        std::cout << std::endl << std::endl;
+        std::cout << "ScavTrap1 name is " << ScavTrap1.getName() << std::endl;
+        std::cout << "ScavTrap2 name is " << ScavTrap2.getName() << std::endl;
+        std::cout << "ScavTrap3 name is " << ScavTrap3.getName() << std::endl;
+        std::cout << "ScavTrap4 name is " << ScavTrap4.getName() << std::endl;
 
-        Robot1.attack("Bobby");
-        Robot2.attack("Billy");
-        std::cout << std::endl;
+        std::cout << std::endl << std::endl;
+        ScavTrap1.attack("Bobby");
+        ScavTrap2.attack("Billy");
 
-        Robot3.takeDamage(5);
-        std::cout << "Robot3 have " << Robot3.getEnergy()
+        std::cout << std::endl << std::endl;
+        ScavTrap1.guardGate();
+        ScavTrap2.guardGate();
+        ScavTrap3.guardGate();
+        ScavTrap4.guardGate();
+
+        std::cout << std::endl << std::endl;
+        ScavTrap3.takeDamage(5);
+        std::cout << ScavTrap3.getName() << "(ScavTrap3) have " << ScavTrap3.getEnergy()
             << " Energy Points" << std::endl;
-        Robot4.beRepaired(5);
-        std::cout << "Robot4 have " << Robot4.getEnergy()
+        ScavTrap4.beRepaired(5);
+        std::cout << ScavTrap4.getName() << "(ScavTrap4) have " << ScavTrap4.getEnergy()
             << " Energy Points" << std::endl;
-        Robot4.takeDamage(10);
-        Robot3.beRepaired(3);
-        std::cout << "Robot3 have " << Robot3.getEnergy()
+        ScavTrap4.takeDamage(10);
+        std::cout << ScavTrap4.getName() << "(ScavTrap4) have " << ScavTrap4.getEnergy()
+            << " Energy Points" << std::endl;
+        ScavTrap3.beRepaired(3);
+        std::cout << ScavTrap3.getName() << "(ScavTrap3) have " << ScavTrap3.getEnergy()
+            << " Energy Points" << std::endl;
+    }
+
+    std::cout << std::endl << std::endl << std::endl;
+    std::cout << "===== FRAGTRAP TESTS =====" << std::endl << std::endl;
+    {
+        FragTrap FragTrap1("Kévin");
+        FragTrap FragTrap2("Dylan");
+        FragTrap FragTrap3 = FragTrap1;
+        FragTrap FragTrap4(FragTrap2);
+
+        std::cout << std::endl << std::endl;
+        std::cout << "FragTrap1 name is " << FragTrap1.getName() << std::endl;
+        std::cout << "FragTrap2 name is " << FragTrap2.getName() << std::endl;
+        std::cout << "FragTrap3 name is " << FragTrap3.getName() << std::endl;
+        std::cout << "FragTrap4 name is " << FragTrap4.getName() << std::endl;
+
+        std::cout << std::endl << std::endl;
+        FragTrap1.attack("Bobby");
+        FragTrap2.attack("Billy");
+
+        std::cout << std::endl << std::endl;
+        FragTrap1.highFivesGuys();
+        FragTrap2.highFivesGuys();
+        FragTrap3.highFivesGuys();
+        FragTrap4.highFivesGuys();
+
+        std::cout << std::endl << std::endl;
+        FragTrap3.takeDamage(5);
+        std::cout << FragTrap3.getName() << "(FragTrap3) have " << FragTrap3.getEnergy()
+            << " Energy Points" << std::endl;
+        FragTrap4.beRepaired(5);
+        std::cout << FragTrap4.getName() << "(FragTrap4) have " << FragTrap4.getEnergy()
+            << " Energy Points" << std::endl;
+        FragTrap4.takeDamage(10);
+        std::cout << FragTrap4.getName() << "(FragTrap4) have " << FragTrap4.getEnergy()
+            << " Energy Points" << std::endl;
+        FragTrap3.beRepaired(3);
+        std::cout << FragTrap3.getName() << "(FragTrap3) have " << FragTrap3.getEnergy()
             << " Energy Points" << std::endl;
     }
     return 0;

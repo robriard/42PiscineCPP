@@ -6,24 +6,23 @@
 /*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 23:16:24 by unknow            #+#    #+#             */
-/*   Updated: 2021/11/11 04:46:18 by unknow           ###   ########.fr       */
+/*   Updated: 2021/11/15 11:55:14 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap() : ClapTrap("Déjà Comment tu as réussi à utiliser ce constructeur ?"){
+FragTrap::FragTrap() : ClapTrap(){
+    std::cout << "[FragTrap] Default constructor called" << std::endl;
     this->_hit = 100;
     this->_energy = 100;
     this->_attack = 30;
-    std::cout << "Default FragTrap Constructor called" << std::endl;
     return;
 }
 
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name){
-    std::cout << "[FragTrap] " << this->_name
-        << " has been created" << std::endl;
+    std::cout << "[FragTrap] Overload constructor called" << std::endl;
     this->_hit = 100;
     this->_energy = 100;
     this->_attack = 30;
@@ -31,8 +30,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name){
 }
 
 FragTrap::FragTrap(FragTrap const & src) : ClapTrap(src){
-    std::cout << "[FragTrap] " << this->_name
-        << " has been created by copy" << std::endl;
+        std::cout << "[FragTrap] Copy constructor called" << std::endl;
     this->_hit = 100;
     this->_energy = 100;
     this->_attack = 30;
