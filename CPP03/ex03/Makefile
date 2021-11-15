@@ -6,7 +6,7 @@
 #    By: robriard <robriard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/13 11:21:40 by robriard          #+#    #+#              #
-#    Updated: 2021/11/11 09:01:25 by robriard         ###   ########.fr        #
+#    Updated: 2021/11/11 09:05:12 by robriard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,14 +22,15 @@ WHITE		:= $(shell tput -Txterm setaf 7)
 RESET		:= $(shell tput -Txterm sgr0)
 endif
 
-NAME = FragTrap
+NAME = DiamondTrap
 CC = clang++
 FLAGS = -Wall -Wextra -Werror
 
 SRCS =	main.cpp		\
 		ClapTrap.cpp	\
 		ScavTrap.cpp	\
-		FragTrap.cpp
+		FragTrap.cpp	\
+		DiamondTrap.cpp
 OBJS = ${SRCS:.cpp=.o}
 DEP = $(OBJS:%.o=%.d)
 
