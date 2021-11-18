@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   WrongAnimal.class.hpp                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/10 22:33:07 by unknow            #+#    #+#             */
-/*   Updated: 2021/11/17 13:26:15 by unknow           ###   ########.fr       */
+/*   Created: 2021/11/16 14:21:23 by unknow            #+#    #+#             */
+/*   Updated: 2021/11/16 14:23:04 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef WRONGANIMAL_CLASS_HPP
+# define WRONGANIMAL_CLASS_HPP
 
-#include "ClapTrap.hpp"
+#include <iostream>
 
-class ScavTrap : virtual public ClapTrap {
+class WrongAnimal{
 public:
-    ScavTrap(std::string name);
-    ScavTrap(ScavTrap const & src);
-    ~ScavTrap();
-    ScavTrap& operator=(ScavTrap const &);
-    void    guardGate(void);
-    void    Sattack(std::string const & target) const;
+
+    WrongAnimal(void);
+    WrongAnimal(WrongAnimal const & src);
+    virtual ~WrongAnimal();
+
+    WrongAnimal& operator=(WrongAnimal const & src);
+    
+    virtual std::string getType(void) const;
+    virtual void        makeSound() const;
 
 protected:
-    unsigned int    _Shit;
-    unsigned int    _Senergy;
-    unsigned int    _Sattack;
-    ScavTrap();
+    std::string _type;
 };
 
 #endif

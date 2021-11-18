@@ -6,7 +6,7 @@
 /*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 22:33:07 by unknow            #+#    #+#             */
-/*   Updated: 2021/11/15 12:42:11 by unknow           ###   ########.fr       */
+/*   Updated: 2021/11/17 13:51:50 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ public:
     std::string&    getName(void);
 
 private:
-    std::string _name;
+    std::string     _name;
     DiamondTrap(void);
 };
 

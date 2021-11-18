@@ -6,27 +6,27 @@
 /*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 10:22:33 by unknow            #+#    #+#             */
-/*   Updated: 2021/11/15 13:13:34 by unknow           ###   ########.fr       */
+/*   Updated: 2021/11/17 13:59:09 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "DiamondTrap.hpp"
 
 DiamondTrap::DiamondTrap() : ClapTrap(), FragTrap(), ScavTrap(){
-    this->_name = ClapTrap::_name;
-    this->_hit = FragTrap::_hit;
-    this->_energy = ScavTrap::_energy;
-    this->_attack = FragTrap::_attack;
     std::cout << "[DiamondTrap] Default constructor called" << std::endl;
+    this->_name = ClapTrap::_name;
+    this->_hit = FragTrap::_Fhit;
+    this->_energy = ScavTrap::_Senergy;
+    this->_attack = FragTrap::_Fattack;
     return;
 }
 
 
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), _name(name){
     std::cout << "[DiamondTrap] Overload constructor called" << std::endl;
-    this->_hit = FragTrap::_hit;
-    this->_energy = ScavTrap::_energy;
-    this->_attack = FragTrap::_attack;
+    this->_hit = FragTrap::_Fhit;
+    this->_energy = ScavTrap::_Senergy;
+    this->_attack = FragTrap::_Fattack;
     return;
 }
 
@@ -34,9 +34,9 @@ DiamondTrap::DiamondTrap(DiamondTrap const & src){
     std::cout << "[DiamondTrap] Copy constructor called" << std::endl;
     ClapTrap::_name = src._name + "_clap_name";
     this->_name = src._name;
-    this->_hit = FragTrap::_hit;
-    this->_energy = ScavTrap::_energy;
-    this->_attack = FragTrap::_attack;
+    this->_hit = FragTrap::_Fhit;
+    this->_energy = ScavTrap::_Senergy;
+    this->_attack = FragTrap::_Fattack;
     return;
 }
 
@@ -63,7 +63,7 @@ void DiamondTrap::whoAmI(void) const{
 }
 
 void        DiamondTrap::attack(std::string const & target) const{
-    ScavTrap::attack(target);
+    ScavTrap::Sattack(target);
 }
 
 std::string&    DiamondTrap::getName(void){

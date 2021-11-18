@@ -6,7 +6,7 @@
 /*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 22:33:07 by unknow            #+#    #+#             */
-/*   Updated: 2021/11/15 12:37:29 by unknow           ###   ########.fr       */
+/*   Updated: 2021/11/17 13:12:13 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,12 @@ public:
     ~FragTrap(void);
     FragTrap& operator=(FragTrap const &);
     void    highFivesGuys(void);
-    void    attack(std::string const & target);
+    void    Fattack(std::string const & target);
 
 protected:
+    unsigned int    _Fhit;
+    unsigned int    _Fenergy;
+    unsigned int    _Fattack;
     FragTrap(void);
 };
 
