@@ -6,7 +6,7 @@
 /*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 06:04:53 by unknow            #+#    #+#             */
-/*   Updated: 2021/11/18 11:10:14 by unknow           ###   ########.fr       */
+/*   Updated: 2021/11/22 16:12:56 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ MateriaSource::~MateriaSource() {
 }
 
 MateriaSource& MateriaSource::operator=(MateriaSource const & rhs) {
-	std::cout << "[MateriaSource] operator ~ called" << std::endl;
+	std::cout << "[MateriaSource] operator = called" << std::endl;
 	for (int i = 0; i < 4; i++) {
 		if (this->_materia[i] != NULL)
 			delete this->_materia[i];

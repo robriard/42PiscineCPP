@@ -6,7 +6,7 @@
 #    By: unknow <unknow@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/13 11:21:40 by robriard          #+#    #+#              #
-#    Updated: 2021/11/19 16:35:43 by unknow           ###   ########.fr        #
+#    Updated: 2021/11/19 17:20:01 by unknow           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,14 +22,13 @@ WHITE		:= $(shell tput -Txterm setaf 7)
 RESET		:= $(shell tput -Txterm sgr0)
 endif
 
-NAME = AMateria
+NAME = Form
 CC = clang++
 FLAGS = -Wall -Wextra -Werror --std=c++98
 
-SRCS =	main.cpp				\
-		AMateria.class.cpp		\
-		ICharacter.class.cpp	\
-		IMateriaSource.class.cpp
+SRCS =	main.cpp		\
+		Bureaucrat.cpp	\
+		Form.cpp
 OBJS = ${SRCS:.cpp=.o}
 DEP = $(OBJS:%.o=%.d)
 
