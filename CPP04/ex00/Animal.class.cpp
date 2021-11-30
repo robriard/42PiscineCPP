@@ -6,7 +6,7 @@
 /*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 14:15:59 by unknow            #+#    #+#             */
-/*   Updated: 2021/11/15 14:45:03 by unknow           ###   ########.fr       */
+/*   Updated: 2021/11/25 13:18:21 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 Animal::Animal(void) : _type("Animal"){
     std::cout << "[Animal] default constructor called" << std::endl;
+    return;
+}
+
+Animal::Animal(std::string const & type) : _type(type){
+    std::cout << "[Animal] Oevrload constructor called" << std::endl;
     return;
 }
 

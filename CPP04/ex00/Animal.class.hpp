@@ -6,7 +6,7 @@
 /*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 13:59:11 by unknow            #+#    #+#             */
-/*   Updated: 2021/11/15 14:47:17 by unknow           ###   ########.fr       */
+/*   Updated: 2021/11/25 13:19:49 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ public:
     virtual void        makeSound() const;
 
 protected:
+    Animal(std::string const & type);
     std::string _type;
 };
 

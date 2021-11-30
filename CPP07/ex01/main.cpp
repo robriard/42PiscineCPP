@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.class.hpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/15 17:04:01 by unknow            #+#    #+#             */
-/*   Updated: 2021/11/25 13:25:31 by unknow           ###   ########.fr       */
+/*   Created: 2021/11/25 15:03:43 by unknow            #+#    #+#             */
+/*   Updated: 2021/11/25 16:19:35 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_CLASS_HPP
-# define BRAIN_CLASS_HPP
+#include "iter.hpp"
+# include <iostream>
 
-#include <iostream>
+void	print(char &c)
+{
+	std::cout << c;
+}
 
-class Brain{
-public:
-    Brain();
-    Brain(Brain const & src);
-    ~Brain();
+void	add(char &c)
+{
+	c++;
+}
 
-    Brain& operator=(Brain const & src);
-
-    std::string *getIdeas(void) const;
-private:
-    std::string *_ideas;
-
-};
-
-#endif
+int main(void)
+{
+	char test[] = "abcdefghijklmnopqrstuvwxyz";
+	::iter(test, strlen(test), print);
+	std::cout << std::endl;
+	::iter(test, strlen(test), add);
+	::iter(test, strlen(test), print);
+	return 0;
+}

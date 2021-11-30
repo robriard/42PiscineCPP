@@ -6,15 +6,14 @@
 /*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 14:15:59 by unknow            #+#    #+#             */
-/*   Updated: 2021/11/17 10:39:16 by unknow           ###   ########.fr       */
+/*   Updated: 2021/11/25 13:16:32 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.class.hpp"
 
-Cat::Cat(void){
+Cat::Cat(void) : Animal("Cat"){
     std::cout << "[Cat] default constructor called" << std::endl;
-    this->_type = "Cat";
     return;
 }
 

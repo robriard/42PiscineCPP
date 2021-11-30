@@ -6,15 +6,14 @@
 /*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 14:15:59 by unknow            #+#    #+#             */
-/*   Updated: 2021/11/17 10:39:28 by unknow           ###   ########.fr       */
+/*   Updated: 2021/11/25 13:19:08 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.class.hpp"
 
-Dog::Dog(void){
+Dog::Dog(void) : Animal("Dog"){
     std::cout << "[Dog] default constructor called" << std::endl;
-    this->_type = "Dog";
     return;
 }
 

@@ -6,7 +6,7 @@
 #    By: unknow <unknow@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/13 11:21:40 by robriard          #+#    #+#              #
-#    Updated: 2021/11/25 13:48:18 by unknow           ###   ########.fr        #
+#    Updated: 2021/11/25 14:23:38 by unknow           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,15 +22,13 @@ WHITE		:= $(shell tput -Txterm setaf 7)
 RESET		:= $(shell tput -Txterm sgr0)
 endif
 
-NAME = brain
+NAME = whatever
 CC = clang++
 FLAGS = -Wall -Wextra -Werror --std=c++98
 
-SRCS =	main.cpp			\
-		Animal.class.cpp	\
-		Cat.class.cpp		\
-		Dog.class.cpp		\
-		Brain.class.cpp
+SRCS =	main.cpp
+		
+		
 OBJS = ${SRCS:.cpp=.o}
 DEP = $(OBJS:%.o=%.d)
 
