@@ -6,7 +6,7 @@
 /*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 16:03:48 by unknow            #+#    #+#             */
-/*   Updated: 2021/12/01 12:16:36 by unknow           ###   ########.fr       */
+/*   Updated: 2021/12/06 12:03:29 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,16 @@ void			Span::addNumber(int newInt) {
 	if (this->_vec.size() == this->_maxInts)
 		throw maxInts();
 	this->_vec.push_back(newInt);
+}
+
+void			Span::addRange(std::vector<int>::iterator begin, std::vector<int>::iterator end) {
+	size_t	range = 0;
+	for (std::vector<int>::iterator it = begin; it != end; it++)
+		range++;
+	if (range + this->_vec.size() > this->_maxInts)
+		throw maxInts();
+	for (std::vector<int>::iterator it = begin; it != end; it++)
+		this->_vec.push_back(*it);
 }
 
 unsigned int		Span::shortestSpan(void) const{

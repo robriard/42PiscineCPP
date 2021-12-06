@@ -6,7 +6,7 @@
 /*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 12:19:59 by unknow            #+#    #+#             */
-/*   Updated: 2021/12/01 14:35:11 by unknow           ###   ########.fr       */
+/*   Updated: 2021/12/06 13:32:09 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,10 @@ public:
 	};
 
     iterator				begin(void) {return std::stack<T>::c.begin();};
-    const_iterator			cbegin(void) {return std::stack<T>::c.cbegin();};
     reverse_iterator		rbegin(void) {return std::stack<T>::c.rbegin();};
-	const_reverse_iterator	crbegin(void) {return std::stack<T>::c.crbegin();};
 	
     iterator				end(void) {return std::stack<T>::c.end();};
     reverse_iterator		rend(void) {return std::stack<T>::c.rend();};
-    const_iterator			cend(void) {return std::stack<T>::c.cend();};
-	const_reverse_iterator	crend(void) {return std::stack<T>::c.crend();};
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: unknow <unknow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 15:52:20 by unknow            #+#    #+#             */
-/*   Updated: 2021/12/01 12:03:27 by unknow           ###   ########.fr       */
+/*   Updated: 2021/12/06 11:56:41 by unknow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ public:
 
     Span&			operator=(Span const & rhs);
 	void			addNumber(int newInt);
+	void			addRange(std::vector<int>::iterator begin, std::vector<int>::iterator end);
 	unsigned int	shortestSpan(void) const;
 	unsigned int	longestSpan(void) const;
 private:
